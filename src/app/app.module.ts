@@ -10,6 +10,7 @@ import { HtmlTableComponent } from './html-table/html-table.component';
 import { RouterModule } from '@angular/router';
 import { MaterialTableComponent } from './material-table/material-table.component';
 import {APP_BASE_HREF} from '@angular/common';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   providers: [ {provide: APP_BASE_HREF, useValue: '/'} ] ,
@@ -17,7 +18,8 @@ import {APP_BASE_HREF} from '@angular/common';
       BrowserModule,
       FormsModule,
       AppRoutingModule,
-      RouterModule
+      RouterModule,
+      MatTableModule
     ],
   declarations: [
       AppComponent,

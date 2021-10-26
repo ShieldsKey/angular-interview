@@ -12,9 +12,9 @@ export class ManualSubscriptionsComponent  {
     second: string;
     third: number;
     thirdSubscription: Subscription;
-  
+
     ngOnInit() {
-        // we don't need to worry about the first two values since they return only one value
+
       getSingleValueObservable()
         .subscribe(value => this.first = value);
   

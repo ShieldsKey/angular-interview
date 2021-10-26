@@ -8,10 +8,11 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HtmlTableComponent } from './html-table/html-table.component';
 import { RouterModule } from '@angular/router';
+import { MaterialTableComponent } from './material-table/material-table.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, RouterModule ],
-  declarations: [ AppComponent, HelloComponent, HtmlTableComponent ],
+  declarations: [ AppComponent, HelloComponent, HtmlTableComponent, MaterialTableComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

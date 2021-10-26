@@ -1,18 +1,18 @@
-<table *ngIf="results; else loading;" class="table table-bordered" >
+<table class="table table-bordered" *ngIf="baseObject$ | async as baseObject; else loading;">
     <thead>
         <tr>
             <th width="50">name</th>
             <th>scope</th>
             <th>version</th>
-            <th>Date</th>
+            <th>date</th>
         </tr>
     </thead>
-    <tbody  *ngFor="let result of results">
+    <tbody *ngFor="let result of baseObject.results">
         <tr>
-            <td>{{ result.package.name }}</td>
-            <td>{{ result.package.scope }}</td>
-            <td>{{ result.package.version }}</td>
-            <td>{{ result.package.date }}</td>
+            <td>{{result.package.name}}</td>
+            <td>{{result.package.scope}}</td>
+            <td>{{result.package.version}}</td>
+            <td>{{result.package.date}}</td>
         </tr>
     </tbody>
 </table>

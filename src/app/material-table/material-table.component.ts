@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { finalize } from 'rxjs';
 import { HttpService } from '../http.service';
 import { Result, RootObject } from '../interfaces/searchResults';
 
@@ -8,13 +9,17 @@ import { Result, RootObject } from '../interfaces/searchResults';
   styleUrls: ['./material-table.component.css']
 })
 export class MaterialTableComponent implements OnInit {
+    loading = false
     dataSource: any[];
     displayedColumns: string[] = ['name', 'scope', 'version', 'date'];
-
     constructor(private readonly httpService: HttpService) { }
 
     public ngOnInit(): void {
-        this.httpService.getSearchResults().subscribe((data: RootObject) => {
+        this.loading = true;
+        this.httpService.getSearchResults()
+            .pipe(
+            finalize(() => this.loading = false))
+            .subscribe((data: RootObject) => {
             this.dataSource = data.results.map((result: Result) => {
                 return result.package;
             });

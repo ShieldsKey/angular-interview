@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialTableComponent } from './material-table/material-table.component';
 import {APP_BASE_HREF} from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   providers: [ {provide: APP_BASE_HREF, useValue: '/'} ] ,
@@ -19,7 +20,8 @@ import {MatTableModule} from '@angular/material/table';
       FormsModule,
       AppRoutingModule,
       RouterModule,
-      MatTableModule
+      MatTableModule,
+      HttpClientModule
     ],
   declarations: [
       AppComponent,

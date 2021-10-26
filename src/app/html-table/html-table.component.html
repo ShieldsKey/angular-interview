@@ -1,23 +1,20 @@
-<table class="table table-bordered" >
-<thead>
-    <tr>
-        <th width="50">name</th>
-        <th>scope</th>
-        <th>version</th>
-        <th>description</th>
-        <th>Date</th>
-        <th>keywords</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</tbody>
+<table *ngIf="results; else loading;" class="table table-bordered" >
+    <thead>
+        <tr>
+            <th width="50">name</th>
+            <th>scope</th>
+            <th>version</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody  *ngFor="let result of results">
+        <tr>
+            <td>{{ result.package.name }}</td>
+            <td>{{ result.package.scope }}</td>
+            <td>{{ result.package.version }}</td>
+            <td>{{ result.package.date }}</td>
+        </tr>
+    </tbody>
 </table>
+<ng-template #loading>Loading...</ng-template>
 

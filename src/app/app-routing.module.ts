@@ -7,7 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   { path: 'html', component: HtmlTableComponent },
   { path: 'material', component: MaterialTableComponent },
-  // { path: '',   redirectTo: '/html', pathMatch: 'full' }, // redirect to `html`  // remove this line to work with PageNotFound
+  { path: '',   redirectTo: '/html', pathMatch: 'full' }, // redirect to `html` 
   { path: '**', component: PageNotFoundComponent }
 ];
 

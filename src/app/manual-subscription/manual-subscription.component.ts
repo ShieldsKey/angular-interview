@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { getDelayedValueObservable, getMultiValueObservable, getSingleValueObservable } from '../subscriptionServices';
 
 @Component({
   selector: 'app-subscribing-observables',
   templateUrl: './manual-subscription.component.html'
 })
-export class ManualSubscriptionsComponent  {
+export class ManualSubscriptionsComponent implements OnInit {
     show = true;
     first: string;
     second: string;
     third: number;
-    thirdSubscription: Subscription;
 
     ngOnInit() {
 

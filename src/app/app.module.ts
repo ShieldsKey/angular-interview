@@ -9,7 +9,6 @@ import { HelloComponent } from './hello.component';
 import { HtmlTableComponent } from './html-table/html-table.component';
 import { RouterModule } from '@angular/router';
 import { MaterialTableComponent } from './material-table/material-table.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {APP_BASE_HREF} from '@angular/common';
 
 @NgModule({
@@ -18,8 +17,7 @@ import {APP_BASE_HREF} from '@angular/common';
   declarations: [ AppComponent,
     HelloComponent,
     HtmlTableComponent,
-    MaterialTableComponent,
-    PageNotFoundComponent ],
+    MaterialTableComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

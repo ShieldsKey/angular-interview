@@ -30,6 +30,7 @@ export class PackageDataSource implements DataSource<Result> {
             catchError(() => of([])),
             finalize(() => this.loadingSubject.next(false))
         ).subscribe((rootObject: RootObject) => {
+            console.log('loading packages')
             this.packageSubject.next(rootObject.results);
             this.packageCount = rootObject.total;
         }

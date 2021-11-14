@@ -12,6 +12,7 @@ import { MaterialTableComponent } from './material-table/material-table.componen
 import {APP_BASE_HREF} from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   providers: [ {provide: APP_BASE_HREF, useValue: '/'} ] ,
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
       AppRoutingModule,
       RouterModule,
       MatTableModule,
+      MatPaginatorModule,
       HttpClientModule
     ],
   declarations: [

@@ -16,7 +16,7 @@ export class MaterialTableComponent implements OnInit {
 
     public ngOnInit(): void {
         this.loading = true;
-        this.httpService.getSearchResults()
+        this.httpService.getSearchResultsFilter(2,4)
             .pipe(
             finalize(() => this.loading = false))
             .subscribe((data: RootObject) => {

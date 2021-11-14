@@ -9,10 +9,12 @@ import { HelloComponent } from './hello.component';
 import { HtmlTableComponent } from './html-table/html-table.component';
 import { RouterModule } from '@angular/router';
 import { MaterialTableComponent } from './material-table/material-table.component';
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import {APP_BASE_HREF} from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   providers: [ {provide: APP_BASE_HREF, useValue: '/'} ] ,
@@ -22,8 +24,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
       AppRoutingModule,
       RouterModule,
       MatTableModule,
+      MatProgressSpinnerModule,
       MatPaginatorModule,
-      HttpClientModule
+      HttpClientModule,
+      BrowserAnimationsModule
     ],
   declarations: [
       AppComponent,

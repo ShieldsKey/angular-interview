@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RootObject } from './interfaces/searchResults';
+import { RootObject, Result } from './interfaces/searchResults';
 import { delay } from 'rxjs/operators'
 
 @Injectable({
